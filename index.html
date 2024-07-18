@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thermaze - Underfloor Heating</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="./images/thermaze-wide-logo.svg" alt="Thermaze logo" />
+      <button class="menu" id="menu" aria-label="Main Menu">
+        <svg width="30" height="30" viewBox="0 0 100 100">
+          <path
+            class="line line1"
+            d="M 20,29 H 80 C 80,29 95.183626,26.552886 94.048603,66.740373 93.687727,79.51783 89.337539,81.269487 84.867387,81.336152 80.397235,81.402816 75,75 75,75 L 25,25"
+          />
+          <path class="line line2" d="M 20,50 H 80" />
+          <path
+            class="line line3"
+            d="M 20,71 H 80 C 80,71 95.183626,73.447114 94.048603,33.259627 93.687727,20.48217 89.337539,18.730513 84.867387,18.663848 80.397235,18.597188 75,25 75,25 L 25,75"
+          />
+        </svg>
+      </button>
+      <nav id="main-nav" class="main-nav hidden" aria-hidden="true">
+        <a href="#">Installations</a>
+        <a href="#">Repairs</a>
+        <a href="#">Contact us</a>
+      </nav>
+    </header>
+    <main class="hero-container">
+      <picture>
+        <source media="(min-width: 60em)" srcset="./images/hero-desktop.jpg" />
+        <img
+          class="hero-img"
+          src="./images/hero-mobile.jpg"
+          alt="underfloor heating"
+        />
+      </picture>
+      <div class="cta-container">
+        <h1>The only underfloor heating specialist you will ever need</h1>
+        <button class="btn cta-btn">Get a quote</button>
+      </div>
+    </main>
+    <section class="what-we-do">
+      <h2>What we do</h2>
+      <div class="service-1">
+        <picture>
+          <source
+            media="(min-width: 60em)"
+            srcset="./images/installation-desktop.png"
+          />
+          <img
+            src="./images/installation-mobile.png"
+            alt="underfloor heating installation"
+          />
+        </picture>
+        <h3>Underfloor Heating Installation</h3>
+        <p>
+          We offer complete bespoke underfloor heating solutions for both
+          commercial and residential projects across London and Home Counties.
+        </p>
+        <p>
+          Our specialty lies within the design, supply, and installation of
+          bespoke systems to meet client needs, whether wet or electric
+          underfloor systems.
+        </p>
+        <p>
+          Contact us now to discover how our team can advise and design the
+          perfect system for you.
+        </p>
+        <p>
+          Whether you want a current system refurbishing or upgrading, or even a
+          new build project; we cater to all client requests. We provide a
+          consistent and professional service from the initial project stage
+          through to completion.
+        </p>
+        <p>
+          We cover all projects from self-build, residential and commercial new
+          build, and refurbished properties. With our industry-leading warranty,
+          you can rest assured that your heated floors will perform great for
+          decades to come.
+        </p>
+      </div>
+      <div class="service-2">
+        <picture>
+          <source
+            media="(min-width: 60em)"
+            srcset="./images/repairs-desktop.png"
+          />
+          <img
+            src="./images/repairs-mobile.png"
+            alt="underfloor heating repairs"
+          />
+        </picture>
+        <h3>Underfloor Heating Repairs</h3>
+        <p>
+          Thermaze offers a repair service to customers who are having Wet or
+          Electric underfloor heating problems or have had a bad experience and
+          the installer has washed their hands of it and won't come back.
+        </p>
+        <p>
+          We will come to your property, take an impartial look at the system
+          and listen to your experiences to get the system back up to full
+          working speed in no time!
+        </p>
+        <p>
+          The most common problems we find are wiring issues, zones not heating
+          up, air locked pipes, worn out pumps and these are all issues that can
+          be easily sorted out.
+        </p>
+        <p>
+          One phrase we hear very often is “but what if the problem is under the
+          floor?” and we want to reassure you that in 99% of cases the problem
+          with your underfloor heating system is normally above ground!
+        </p>
+      </div>
+    </section>
+    <section class="why-us">
+      <h2>Why work with us</h2>
+      <div class="company-highlight">
+        <img src="./images/quality.svg" alt="quality" />
+        <h4>Quality-Oriented</h4>
+        <p>
+          Our engineers are highly experienced and competent, offering the
+          highest quality installations currently available on the market.
+        </p>
+      </div>
+      <div class="company-highlight">
+        <img src="./images/warranties.svg" alt="warranties" />
+        <h4>Industry-Leading Warranties</h4>
+        <p>
+          All our products are protected with industry-leading warranties
+          allowing you to be reassured that our products and installation
+          services are of superior quality.
+        </p>
+      </div>
+      <div class="company-highlight">
+        <img src="./images/prices.svg" alt="prices" />
+        <h4>Competitive prices</h4>
+        <p>
+          Our pricing is extremely competitive and we thrive to offer the
+          greatest value for money for all our customers whether business or
+          residential.
+        </p>
+      </div>
+      <div class="company-highlight">
+        <img src="./images/estimates.svg" alt="estimates" />
+        <h4>Free Estimates</h4>
+        <p>
+          We offer a free, no-obligation quote for any installation work we may
+          be able to do for you.
+        </p>
+      </div>
+    </section>
+    <section class="reviews">
+      <h2>What our customers say</h2>
+      <div class="reviews-slider">
+        <div class="review">
+          <div class="customer-info">
+            <img src="./images/reviews/person1.png" alt="person1" />
+            <h5>John Smith</h5>
+          </div>
+          <img src="./images/reviews/stars.svg" alt="5 stars" />
+          <p class="review-highlights">
+            Positive: Punctuality, Quality, Responsiveness
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <div class="review">
+          <div class="customer-info">
+            <img src="./images/reviews/person1.png" alt="person1" />
+            <h5>John Smith</h5>
+          </div>
+          <img src="./images/reviews/stars.svg" alt="5 stars" />
+          <p class="review-highlights">
+            Positive: Punctuality, Quality, Responsiveness
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <div class="review">
+          <div class="customer-info">
+            <img src="./images/reviews/person1.png" alt="person1" />
+            <h5>John Smith</h5>
+          </div>
+          <img src="./images/reviews/stars.svg" alt="5 stars" />
+          <p class="review-highlights">
+            Positive: Punctuality, Quality, Responsiveness
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <div class="review">
+          <div class="customer-info">
+            <img src="./images/reviews/person1.png" alt="person1" />
+            <h5>John Smith</h5>
+          </div>
+          <img src="./images/reviews/stars.svg" alt="5 stars" />
+          <p class="review-highlights">
+            Positive: Punctuality, Quality, Responsiveness
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <div class="review">
+          <div class="customer-info">
+            <img src="./images/reviews/person1.png" alt="person1" />
+            <h5>John Smith</h5>
+          </div>
+          <img src="./images/reviews/stars.svg" alt="5 stars" />
+          <p class="review-highlights">
+            Positive: Punctuality, Quality, Responsiveness
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <div class="review">
+          <div class="customer-info">
+            <img src="./images/reviews/person1.png" alt="person1" />
+            <h5>John Smith</h5>
+          </div>
+          <img src="./images/reviews/stars.svg" alt="5 stars" />
+          <p class="review-highlights">
+            Positive: Punctuality, Quality, Responsiveness
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <a class="prev"></a>
+        <a class="next"></a>
+      </div>
+      <a href="#"
+        ><img src="./images/reviews/google.svg" alt="google reviews"
+      /></a>
+    </section>
+    <section class="contact">
+      <h2>Get in touch</h2>
+      <div class="contact-wrapper">
+        <form class="contact-form" action="">
+          <div class="contact-form-line1">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" type="text" />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" type="text" />
+            </div>
+          </div>
+          <div class="contact-form-line2">
+            <div>
+              <label for="phone">Phone</label>
+              <input id="phone" type="number" />
+            </div>
+            <div>
+              <label for="postcode">Postcode</label>
+              <input id="postcode" type="text" />
+            </div>
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <input id="message" type="text" />
+          </div>
+          <div>
+            <input type="file" />
+            <span>No file chosen</span>
+          </div>
+          <div>
+            <input type="checkbox" />
+            <span
+              >By clicking on this, you have agreed to accept our
+              <a href="#">Terms & Conditions</a></span
+            >
+          </div>
+          <button class="btn form-btn">Send</button>
+        </form>
+        <div class="contact-details">
+          <div class="contact-phone-numbers">
+            <p>020 8281 6549</p>
+            <p>07445 049 501</p>
+          </div>
+          <p>Available from 9:00 - 17:00</p>
+          <p>info@thermaze.co.uk</p>
+          <p>4 York House, Langston Road, Loughton, IG10 3TQ</p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>© 2024. Thermaze LTD</p>
+      <nav class="footer-nav">
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Installations</a>
+        <a href="#">Repairs</a>
+      </nav>
+    </footer>
+    <script src="./main.js"></script>
+  </body>
+</html>
