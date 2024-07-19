@@ -3,7 +3,7 @@ const windowDesktop = window.matchMedia("(min-width: 60em)");
 const menuBtn = document.getElementById("menu");
 const nav = document.getElementById("main-nav");
 
-function handleWidth () {
+function handleWidth() {
   if (!windowDesktop.matches) {
     // if on mobile
     menuBtn.addEventListener("click", handleClick);
@@ -18,15 +18,15 @@ function handleWidth () {
     menuBtn.setAttribute("aria-hidden", true);
     nav.classList.remove("hidden");
     nav.setAttribute("aria-hidden", false);
-  };
-};
+  }
+}
 
-function handleClick () {
+function handleClick() {
   menuBtn.classList.toggle("opened");
   menuBtn.setAttribute("aria-expanded", menu.classList.contains("opened"));
   nav.classList.toggle("hidden");
   nav.setAttribute("aria-hidden", nav.classList.contains("hidden"));
-};
+}
 
 handleWidth();
 
@@ -34,72 +34,18 @@ windowDesktop.addEventListener("change", handleWidth);
 
 
 
+// review carousel
+const prevBtn = document.getElementById("prev");
+const nextBtn = document.getElementById("next");
+
+const cardsContainer = document.querySelector(".review-cards");
+const reviews = Array.from(document.querySelectorAll(".review-card"));
+
+cardsContainer.innerHTML = "";
+
+cardsContainer.appendChild(getRandomReview(reviews));
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function handleMobileMenu () {
-//   console.log(`desktop: ${windowDesktop.matches}`)
-//   if (!windowDesktop.matches) {
-//     console.log("you're on mobile")
-//     const menu = document.getElementById("menu");
-//     const nav = document.getElementById("main-nav");
-  
-//     menu.addEventListener("click", handleClick);
-//   }
-// }
-
-// handleMobileMenu()
-
-// windowDesktop.addEventListener("change", updateWindowSize)
-
-
-// function updateWindowSize() {
-//   console.log("changed")
-//   handleMobileMenu();
-// }
-
-// function checkDesktop() {
-//   return windowDesktop
-// }
-
-
-
-
-
-
-// function handleClick () {
-//   this.classList.toggle("opened");
-//   this.setAttribute("aria-expanded", this.classList.contains("opened"));
-//   nav.classList.toggle("hidden");
-//   nav.setAttribute("aria-hidden", nav.classList.contains("hidden"))
-// };
-
-
-// x.addEventListener("change", handleScreenSizeChange)
-
-// function handleScreenSizeChange() {
-//   console.log("window size changed")
-//   if (!x.matches) {
-
-    
-    
-    
-    
-//   }
-// }
-
+function getRandomReview (reviews) {
+  return reviews[Math.floor(Math.random() * reviews.length)]
+}
