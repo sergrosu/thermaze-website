@@ -412,11 +412,6 @@ h2::before {
 }
 .review-carousel {
   margin-top: clamp(1.4375rem, 0.6392rem + 2.9703vw, 3.3125rem);
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
-  justify-content: center;
   position: relative;
 }
 .review-carousel .prev,
@@ -438,7 +433,12 @@ h2::before {
 .review-carousel .next:where(:focus, :hover) {
   fill-opacity: 0.3;
 }
-
+.review-cards {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  justify-content: center;
+}
 .review-card {
   background: var(--clr-neutral-300);
   width: clamp(24rem, 23.6541rem + 1.2871vw, 24.8125rem);

@@ -3,16 +3,16 @@ const windowDesktop = window.matchMedia("(min-width: 60em)");
 const menuBtn = document.getElementById("menu");
 const nav = document.getElementById("main-nav");
 
+windowDesktop.addEventListener("change", handleWidth);
+
 function handleWidth() {
   if (!windowDesktop.matches) {
-    // if on mobile
     menuBtn.addEventListener("click", handleClick);
     menuBtn.classList.remove("hidden");
     menuBtn.setAttribute("aria-hidden", false);
     nav.classList.add("hidden");
     nav.setAttribute("aria-hidden", true);
   } else {
-    // if on desktop
     menuBtn.removeEventListener("click", handleClick);
     menuBtn.classList.add("hidden");
     menuBtn.setAttribute("aria-hidden", true);
@@ -30,22 +30,60 @@ function handleClick() {
 
 handleWidth();
 
-windowDesktop.addEventListener("change", handleWidth);
+// carousel logic
 
-
-
-// review carousel
+const fitTwo = window.matchMedia("(min-width: 60em)");
+const fitThree = window.matchMedia("(min-width: 75em)");
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
+const reviewContainer = document.querySelector(".review-cards");
+const reviewCards = document.querySelectorAll(".review-card");
+let visibleReviewsCount;
+let firstIndex = 0;
 
-const cardsContainer = document.querySelector(".review-cards");
-const reviews = Array.from(document.querySelectorAll(".review-card"));
+fitTwo.addEventListener("change", widthController);
+fitThree.addEventListener("change", widthController);
 
-cardsContainer.innerHTML = "";
+prevBtn.addEventListener("click", showPrevious);
+nextBtn.addEventListener("click", showNext);
 
-cardsContainer.appendChild(getRandomReview(reviews));
-
-
-function getRandomReview (reviews) {
-  return reviews[Math.floor(Math.random() * reviews.length)]
+function widthController() {
+  if (fitThree.matches) {
+    visibleReviewsCount = 3;
+  } else if (fitTwo.matches) {
+    visibleReviewsCount = 2;
+  } else {
+    visibleReviewsCount = 1;
+  }
+  showReviewCardByIndex();
 }
+
+function showPrevious() {
+  if (firstIndex === 0) {
+    firstIndex = reviewCards.length;
+  }
+  firstIndex--;
+  showReviewCardByIndex();
+}
+
+function showNext() {
+  if (firstIndex === reviewCards.length - 1) {
+    firstIndex = -1;
+  }
+  firstIndex++;
+  showReviewCardByIndex();
+}
+
+function showReviewCardByIndex() {
+  const reviewArray = Array.from(reviewCards);
+  reviewContainer.innerHTML = "";
+  for (let i = firstIndex; i < firstIndex + visibleReviewsCount; i++) {
+    if (i >= reviewCards.length) {
+      reviewContainer.appendChild(reviewArray[i - reviewCards.length]);
+    } else {
+      reviewContainer.appendChild(reviewArray[i]);
+    }
+  }
+}
+
+widthController();
