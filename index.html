@@ -235,7 +235,6 @@
         </div>
       </div>
     </section>
-
     <section class="reviews-section">
       <h2>What our customers say</h2>
       <div class="review-carousel">
@@ -484,16 +483,12 @@
         <svg id="prev" class="prev" role="button" aria-label="previous" width="38" height="38" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 2.375C9.856 2.375 2.375 9.856 2.375 19S9.856 35.625 19 35.625 35.625 28.144 35.625 19 28.144 2.375 19 2.375zm3.206 21.731a1.148 1.148 0 010 1.663c-.237.237-.475.356-.831.356s-.594-.119-.831-.356l-5.938-5.938a1.148 1.148 0 010-1.662l5.938-5.938a1.148 1.148 0 011.662 0 1.148 1.148 0 010 1.663L17.1 19l5.106 5.106z" fill="currentColor"/></svg>
         <svg id="next" class="next" role="button" aria-label="next" width="38" height="38" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 35.625c9.144 0 16.625-7.481 16.625-16.625S28.144 2.375 19 2.375 2.375 9.856 2.375 19 9.856 35.625 19 35.625zm-3.206-21.731a1.148 1.148 0 010-1.663c.237-.237.475-.356.831-.356s.594.119.831.356l5.938 5.938a1.148 1.148 0 010 1.662l-5.938 5.938a1.148 1.148 0 01-1.662 0 1.148 1.148 0 010-1.663L20.9 19l-5.106-5.106z" fill="currentColor"/></svg>
       </div>
-      <a href="#"
-        ><img src="./images/reviews/google.svg" alt="google reviews"
-      /></a>
     </section>
-
-    <section class="contact">
+    <section class="contact-section">
       <h2>Get in touch</h2>
       <div class="contact-wrapper">
         <form class="contact-form" action="">
-          <div class="contact-form-line1">
+          <div class="contact-form-line">
             <div>
               <label for="name">Name</label>
               <input id="name" type="text" />
@@ -503,7 +498,7 @@
               <input id="email" type="text" />
             </div>
           </div>
-          <div class="contact-form-line2">
+          <div class="contact-form-line">
             <div>
               <label for="phone">Phone</label>
               <input id="phone" type="number" />
@@ -515,39 +510,46 @@
           </div>
           <div>
             <label for="message">Message</label>
-            <input id="message" type="text" />
+            <input id="message" class="message" type="text" />
           </div>
           <div>
-            <input type="file" />
-            <span>No file chosen</span>
+            <input id="file-upload" class="file-upload" type="file" />
           </div>
-          <div>
-            <input type="checkbox" />
-            <span
+
+          <div class="terms">
+            <input type="checkbox" class="checkbox"/>
+            <!-- <span
               >By clicking on this, you have agreed to accept our
               <a href="#">Terms & Conditions</a></span
-            >
+            > -->
+            <span>By clicking on this, you have agreed to accept our
+              <a href="#">Terms & Conditions</a></span>
           </div>
+
           <button class="btn form-btn">Send</button>
         </form>
         <div class="contact-details">
           <div class="contact-phone-numbers">
-            <p>020 8281 6549</p>
-            <p>07445 049 501</p>
+            <div class="numbers">
+              <a href="tel:02082816549">020 8281 6549</a>
+              <a href="tel:07445049501">07445 049 501</a>
+            </div>
           </div>
-          <p>Available from 9:00 - 17:00</p>
-          <p>info@thermaze.co.uk</p>
-          <p>4 York House, Langston Road, Loughton, IG10 3TQ</p>
+          <p class="contact-working-hours">Available from 9:00 - 17:00</p>
+          <a class="contact-email" href="mailto: info@thermaze.co.uk">info@thermaze.co.uk</a>
+          <p class="contact-address">4 York House, Langston Road, Loughton, IG10 3TQ</p>
         </div>
       </div>
     </section>
     <footer>
-      <p>© 2024. Thermaze LTD</p>
-      <nav class="footer-nav">
-        <a href="#">Terms & Conditions</a>
-        <a href="#">Installations</a>
-        <a href="#">Repairs</a>
-      </nav>
+      <div class="footer-wrapper">
+        <p>© 2024. Thermaze LTD</p>
+        <nav class="footer-nav">
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Installations</a>
+          <a href="#">Repairs</a>
+        </nav>
+      </div>
     </footer>
     <script src="./main.js"></script>
   </body>
