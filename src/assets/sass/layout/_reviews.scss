@@ -1,0 +1,72 @@
+@use "../abstracts" as *;
+
+/* reviews style */
+
+.reviews-section {
+  margin-top: clamp(4.375rem, 2.5124rem + 6.9307vw, 8.75rem);
+  padding-top: clamp(6.125rem, 4.5285rem + 5.9406vw, 9.875rem);
+  padding-bottom: clamp(5.8125rem, 3.0255rem + 9.6939vw, 11.75rem);
+  background-color: $clr-neutral-400;
+  max-width: unset;
+}
+.review-carousel {
+  margin-top: clamp(1.4375rem, 0.6392rem + 2.9703vw, 3.3125rem);
+  position: relative;
+}
+.review-carousel .prev,
+.review-carousel .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: clamp(2.375rem, 1.3639rem + 3.7624vw, 4.75rem);
+  color: #000;
+  fill-opacity: 0.2;
+}
+.review-carousel .prev {
+  left: 0;
+}
+.review-carousel .next {
+  right: 0;
+}
+.review-carousel .prev:where(:focus, :hover),
+.review-carousel .next:where(:focus, :hover) {
+  fill-opacity: 0.3;
+}
+.review-cards {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  justify-content: center;
+}
+.review-card {
+  background: $clr-neutral-300;
+  width: clamp(24rem, 23.6541rem + 1.2871vw, 24.8125rem);
+  height: clamp(20rem, 16.1683rem + 14.2574vw, 29rem);
+  padding: 0 clamp(3.3125rem, 3.073rem + 0.8911vw, 3.875rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.review-card img {
+  width: 3.4375rem;
+}
+.review-card .customer-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.review-card .customer-info h5 {
+  font-size: $fs-fluid-450;
+  font-weight: $fw-medium;
+}
+.review-card .rating {
+  color: #ff8a00;
+  font-size: 1.75rem;
+}
+.review-card p {
+  margin-top: 0.5rem;
+  text-align: center;
+}

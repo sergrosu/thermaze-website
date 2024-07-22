@@ -1,3 +1,5 @@
+import './src/assets/sass/style.scss';
+
 // menu
 const windowDesktop = window.matchMedia("(min-width: 60em)");
 const menuBtn = document.getElementById("menu");

@@ -1,0 +1,44 @@
+@use "../abstracts/" as *;
+
+/* footer style */
+
+footer {
+  margin-top: 6.375rem;
+  background-color: $clr-primary-400;
+}
+footer,
+footer a {
+  color: $clr-neutral-100;
+}
+.footer-wrapper {
+  margin: 0 auto;
+  max-width: 81rem;
+  padding: 2rem;
+}
+@media (min-width: 60em) {
+  .footer-wrapper {
+    height: 7.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.footer-wrapper > p {
+  font-size: $fs-fluid-450;
+  font-weight: $fw-regular;
+}
+.footer-nav {
+  margin-top: 2.5rem;
+  font-size: $fs-fluid-250;
+  font-weight: $fw-semi-bold;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 60em) {
+  .footer-nav {
+    margin: unset;
+    width: 30em;
+    justify-content: space-between;
+  }
+}

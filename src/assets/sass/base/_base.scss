@@ -1,0 +1,54 @@
+@use "../abstracts" as *;
+
+/* general style */
+
+body {
+  font-family: $ff-400;
+  background-color: $clr-neutral-300;
+}
+
+.header,
+main,
+section,
+footer,
+.reviews-wrapper {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+h2,
+h3,
+h4 {
+  color: $clr-primary-400;
+}
+
+h3,
+h4 {
+  font-size: $fs-fluid-470;
+  font-weight: $fw-bold;
+}
+p {
+  font-size: $fs-fluid-200;
+  font-weight: $fw-regular;
+}
+a {
+  text-decoration: none;
+}
+
+/* sections general style */
+
+h2 {
+  text-transform: uppercase;
+  font-size: $fs-fluid-600;
+  font-weight: $fw-extra-bold;
+  text-align: center;
+  position: relative;
+}
+h2::before {
+  content: url(./images/thermaze-square-logo.svg);
+  width: clamp(2.5rem, 2.4202rem + 0.297vw, 2.6875rem);
+  position: absolute;
+  top: -3.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
