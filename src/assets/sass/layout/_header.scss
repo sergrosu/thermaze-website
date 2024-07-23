@@ -5,6 +5,8 @@
 .header {
   .container {
     max-width: $max-width-lg;
+    padding-top: unset;
+    padding-bottom: unset;
     height: clamp(4.75rem, 4.4307rem + 1.1881vw, 5.5rem);
     display: flex;
     justify-content: space-between;
