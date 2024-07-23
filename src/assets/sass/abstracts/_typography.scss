@@ -1,13 +1,25 @@
 $ff-400: "Inter", sans-serif;
 
-// $fs-xs: 0.625rem;
-// $fs-smaller: 0.75rem;
-// $fs-small: 0.9375rem;
-// $fs-regular: 1.125rem;
-// $fs-medium: 1.25rem;
-// $fs-large: 1.875rem;
-// $fs-larger: 2.1875rem;
+// $fs-xs: 0.625rem;        10
+// $fs-smaller: 0.75rem;    12
+// $fs-small: 0.9375rem;    15
+// $fs-regular: 1.125rem;   18
+// $fs-medium: 1.25rem;     20
+// $fs-large: 1.875rem;     30
+// $fs-larger: 2.1875rem;   35
 // fs: 10, 12, 15, 18, 20, 30, 35
+
+// improved font sizes
+
+// $fs-xs: 0.875rem;        14
+// $fs-smaller: unused;    
+// $fs-small: 1rem;         16
+// $fs-regular: 1.25rem;    20
+// $fs-medium: 1.5rem;      24
+// $fs-large: 2rem;         32
+// $fs-larger: 2.5rem;      40
+
+
 
 $fw-light: 300;
 $fw-regular: 400;
@@ -17,7 +29,16 @@ $fw-bold: 700;
 $fw-extra-bold: 800;
 $fw-black: 900;
 
-$fs-fluid-200: clamp(0.75rem, 0.5903rem + 0.5941vw, 1.125rem);
+// $fs-fluid-200: clamp(0.75rem, 0.5903rem + 0.5941vw, 1.125rem);
+// $fs-fluid-250: clamp(0.75rem, 0.6702rem + 0.297vw, 0.9375rem);
+
+// $fs-fluid-400: clamp(0.9375rem, 0.8577rem + 0.297vw, 1.125rem);
+// $fs-fluid-450: clamp(0.9375rem, 0.8045rem + 0.495vw, 1.25rem);
+// $fs-fluid-470: clamp(0.9375rem, 0.5384rem + 1.4851vw, 1.875rem);
+
+// $fs-fluid-600: clamp(1.125rem, 0.6726rem + 1.6832vw, 2.1875rem);
+
+$fs-fluid-200: clamp(1rem, 0.8936rem + 0.396vw, 1.25rem);
 $fs-fluid-250: clamp(0.75rem, 0.6702rem + 0.297vw, 0.9375rem);
 
 $fs-fluid-400: clamp(0.9375rem, 0.8577rem + 0.297vw, 1.125rem);
