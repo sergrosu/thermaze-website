@@ -41,8 +41,8 @@ $fw-black: 900;
 $fs-fluid-100: clamp(0.875rem, 0.8218rem + 0.198vw, 1rem);        // 14px - 16px
 $fs-fluid-200: clamp(1rem, 0.8936rem + 0.396vw, 1.25rem);         // 16px - 20px
 
-$fs-fluid-400: clamp(0.9375rem, 0.8577rem + 0.297vw, 1.125rem);
-$fs-fluid-450: clamp(0.9375rem, 0.8045rem + 0.495vw, 1.25rem);
-$fs-fluid-470: clamp(0.9375rem, 0.5384rem + 1.4851vw, 1.875rem);
 
-$fs-fluid-600: clamp(1.125rem, 0.6726rem + 1.6832vw, 2.1875rem);
+$fs-fluid-450: 1.25rem;    // links, etc
+$fs-fluid-470: clamp(1.25rem, 0.9307rem + 1.1881vw, 2rem);  // h3, h4
+
+$fs-fluid-600: clamp(1.25rem, 0.7178rem + 1.9802vw, 2.5rem);  // h1, h2
