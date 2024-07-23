@@ -1,1 +1,10 @@
-<svg width="42" height="42" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.127 14.364l4.696-9.535c.48-.976 1.873-.976 2.354 0l4.697 9.535 10.519 1.52c1.077.156 1.508 1.48.728 2.239l-7.608 7.413 1.796 10.475c.184 1.073-.942 1.89-1.905 1.383L21 32.441l-9.403 4.953c-.964.508-2.09-.31-1.906-1.384l1.805-10.474-7.616-7.413c-.78-.759-.35-2.083.727-2.24l10.52-1.52z" fill="url(#prefix__paint0_linear_168_25)"/><defs><linearGradient id="prefix__paint0_linear_168_25" x1="21" y1="4.097" x2="21" y2="37.548" gradientUnits="userSpaceOnUse"><stop stop-color="#7E222B"/><stop offset="1" stop-color="#AA2E29"/></linearGradient></defs></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Quality" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 55 50">
+  <defs>
+    <linearGradient id="b" x1="27.5" y1="52" x2="27.5" y2="2" gradientTransform="translate(0 52) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7f232c"/>
+      <stop offset="1" stop-color="#ab2f29"/>
+    </linearGradient>
+  </defs>
+  <path d="M18.72,15.35L25.74,1.1c.72-1.46,2.8-1.46,3.52,0l7.02,14.25,15.72,2.27c1.61.23,2.25,2.21,1.09,3.35l-11.37,11.08,2.68,15.65c.27,1.6-1.41,2.82-2.85,2.07l-14.05-7.4-14.05,7.4c-1.44.76-3.12-.46-2.85-2.07l2.7-15.65L1.91,20.97c-1.17-1.13-.52-3.11,1.09-3.35l15.72-2.27h0Z" style="fill: url(#b); stroke-width: 0px;"/>
+</svg>

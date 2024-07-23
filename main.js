@@ -24,8 +24,8 @@ function handleWidth() {
 }
 
 function handleClick() {
-  menuBtn.classList.toggle("opened");
-  menuBtn.setAttribute("aria-expanded", menu.classList.contains("opened"));
+  menuBtn.classList.toggle("menu--open");
+  menuBtn.setAttribute("aria-expanded", menu.classList.contains("menu--open"));
   nav.classList.toggle("hidden");
   nav.setAttribute("aria-hidden", nav.classList.contains("hidden"));
 }
@@ -38,8 +38,8 @@ const fitTwo = window.matchMedia("(min-width: 60em)");
 const fitThree = window.matchMedia("(min-width: 75em)");
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
-const reviewContainer = document.querySelector(".review-cards");
-const reviewCards = document.querySelectorAll(".review-card");
+const reviewContainer = document.querySelector(".cards");
+const reviewCards = document.querySelectorAll(".card");
 let visibleReviewsCount;
 let firstIndex = 0;
 

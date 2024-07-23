@@ -1,1 +1,10 @@
-<svg width="42" height="42" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M31.5 38.5a1.75 1.75 0 001.75-1.75V14L21 3.5 8.75 14v22.75a1.75 1.75 0 001.75 1.75h21zM21 12.25a3.5 3.5 0 110 7 3.5 3.5 0 010-7z" fill="url(#prefix__paint0_linear_143_50)"/><defs><linearGradient id="prefix__paint0_linear_143_50" x1="21" y1="3.5" x2="21" y2="38.5" gradientUnits="userSpaceOnUse"><stop stop-color="#7E222B"/><stop offset="1" stop-color="#AA2E29"/></linearGradient></defs></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Prices" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 55 50">
+  <defs>
+    <linearGradient id="b" x1="27.5" y1="52" x2="27.5" y2="2" gradientTransform="translate(0 52) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7f232c"/>
+      <stop offset="1" stop-color="#ab2f29"/>
+    </linearGradient>
+  </defs>
+  <path d="M42.5,50c1.38,0,2.5-1.12,2.5-2.5V15L27.5,0,10,15v32.5c0,1.38,1.12,2.5,2.5,2.5h30ZM27.5,12.5c2.76,0,5,2.24,5,5s-2.24,5-5,5-5-2.24-5-5,2.24-5,5-5Z" style="fill: url(#b); stroke-width: 0px;"/>
+</svg>

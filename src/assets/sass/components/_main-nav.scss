@@ -1,0 +1,41 @@
+@use "../abstracts" as *;
+
+.main-nav {
+  position: absolute;
+  top: 100%;
+  left: 10%;
+  width: 80%;
+  background: $clr-gradient;
+
+  @include lg {
+    position: static;
+    width: unset;
+    background: unset;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  a {
+    display: block;
+    text-transform: uppercase;
+    font-weight: $fw-bold;
+    color: $clr-neutral-300;
+
+    @include lg {
+      color: $clr-primary-400;
+    }
+  }
+
+  .contact-us-anchor {
+    @include lg {
+      color: $clr-neutral-100;
+      background: $clr-gradient;
+      padding: 0.5rem 1.5rem;
+      border-radius: 0.25rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

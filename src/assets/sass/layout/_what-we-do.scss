@@ -1,65 +1,76 @@
 @use "../abstracts" as *;
 
-/* what we do style */
 .what-we-do {
-  margin-top: clamp(10.3125rem, 8.8224rem + 5.5446vw, 13.8125rem);
-  padding: 0 clamp(1.5625rem, -0.5928rem + 8.0198vw, 6.625rem);
-}
-.service-1 {
-  margin-top: clamp(1.6875rem, 0.6231rem + 3.9604vw, 4.1875rem);
-}
-.service-2 {
-  margin-top: clamp(4rem, 2.8292rem + 4.3564vw, 6.75rem);
-}
-.what-we-do h3 {
-  margin-top: 1.5rem;
-  text-align: center;
-}
-.what-we-do img {
-  width: clamp(12.0625rem, 3.3082rem + 32.5743vw, 32.625rem);
-  margin: 0 auto;
-}
-.service-1 img {
-  border-radius: 1.25rem 0 1.25rem 1.25rem;
-  box-shadow: -0.5rem 0.5rem #7e222b;
-}
-@media (min-width: 60em) {
-  .service-1 img {
-    border-radius: 3rem 0 3rem 3rem;
-  }
-}
+  // margin-top: clamp(10.3125rem, 8.8224rem + 5.5446vw, 13.8125rem);
 
-.service-2 {
-  img {
-    box-shadow: 0.5rem 0.5rem $clr-primary-400;
-    border-radius: 0 1.25rem 1.25rem 1.25rem;
-    
+  .wrapper {
+    // padding: clamp(0.5rem, -0.5644rem + 3.9604vw, 3rem);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 90rem;
+
     @include lg {
-      border-radius: 0 3rem 3rem 3rem;
+      gap: 5.25rem;
+      align-items: center;
     }
   }
-}
 
+  .service-1 {
 
+    .wrapper {
+      margin-top: clamp(1.6875rem, 0.6231rem + 3.9604vw, 4.1875rem);
 
-.service-1,
-.service-2 {
-  display: flex;
-  flex-direction: column;
-}
-@media (min-width: 60em) {
-  .service-1,
-  .service-2 {
-    flex-direction: row;
-    gap: 5.25rem;
-    align-items: center;
+      @include lg {
+        flex-direction: row;
+      }
+    }
+
+    img {
+      border-radius: 1.25rem 0 1.25rem 1.25rem;
+      box-shadow: -0.5rem 0.5rem #7e222b;
+
+      @include lg {
+        border-radius: 3rem 0 3rem 3rem;
+      }
+    }
   }
+
   .service-2 {
-    flex-direction: row-reverse;
+    // background-color: $clr-neutral-400;
+
+    .wrapper {
+      margin-top: clamp(4rem, 2.8292rem + 4.3564vw, 6.75rem);
+  
+      @include lg {
+        flex-direction: row-reverse;
+      }
+    }
+
+    img {
+      border-radius: 0 1.25rem 1.25rem 1.25rem;
+      box-shadow: 0.5rem 0.5rem $clr-primary-400;
+      
+      @include lg {
+        border-radius: 0 3rem 3rem 3rem;
+      }
+    }
   }
-  .what-we-do img,
-  .installation-content,
-  .repairs-content {
-    flex: 1;
+
+  h3 {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+
+  img {
+    width: clamp(12.0625rem, 3.3082rem + 32.5743vw, 32.625rem);
+    margin: 0 auto;
+  }
+
+  img, .content {
+
+    @include lg {
+      flex: 1;
+    }
   }
 }

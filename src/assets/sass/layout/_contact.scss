@@ -1,0 +1,188 @@
+@use "../abstracts" as *;
+
+.contact {
+  margin-top: clamp(9.375rem, 8.7003rem + 2.3469vw, 10.8125rem);
+
+  .container {
+    padding: 0;
+  }
+}
+
+//contact form style
+.contact-form-wrapper {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 1.5rem;
+
+  @include lg {
+    margin-left: 6.5rem;
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+    gap: 5.5rem;
+  }
+
+  .contact-form {
+    padding: 0 1.5rem;
+
+    @include lg {
+      padding: 0;
+    }
+  }
+  .contact-form-line {
+    @include lg {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+  .contact-form-line > * {
+    @include lg {
+      width: 50%;
+    }
+  }
+  label {
+    margin-top: 1.125rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: $clr-primary-400;
+    font-size: $fs-fluid-450;
+    font-weight: $fw-medium;
+  }
+  input {
+    border: unset;
+    background: $clr-neutral-500;
+    width: 100%;
+    height: 2.3rem;
+  }
+  .message {
+    height: 11.25rem;
+  }
+  .file-upload {
+    margin-top: 1.5rem;
+    height: clamp(2rem, 1.8137rem + 0.6931vw, 2.4375rem);
+    background: unset;
+    color: $clr-neutral-800;
+    font-family: $ff-400;
+    font-weight: $fw-medium;
+    font-size: $fs-fluid-450;
+  }
+  
+  .file-upload::file-selector-button {
+    background-color: unset;
+    border: 0.5px solid $clr-neutral-800;
+    padding: 0.3rem 2.5rem;
+    margin-right: 1.5rem;
+    height: 100%;
+    width: clamp(10.5625rem, 9.4981rem + 3.9604vw, 13.0625rem);
+    cursor: pointer;
+  }
+
+  .terms {
+    margin-top: 1rem;
+    font-size: $fs-fluid-200;
+    line-height: 1.25;
+    font-weight: $fw-light;
+    display: grid;
+    grid-template-columns: 1em auto;
+    align-items: start;
+    gap: 0.75em;
+
+    input {
+      height: 1em;
+      width: 1em;
+      appearance: none;
+      background: none;
+      border: 1px solid $clr-neutral-800;
+      cursor: pointer;
+
+      &:checked {
+        background-image: url('data:image/svg+xml;utf8,<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="%237e222b"><path d="M21 6.285L9.84 19.018 3 13l1.319-1.49 5.341 4.686L19.525 5 21 6.285z"/></svg>');
+        background-size: contain;
+      }
+    }
+
+    a {
+      color: $clr-neutral-800;
+      text-decoration: underline;
+    }
+  }
+  .form-btn {
+    margin-top: 3rem;
+    border: unset;
+    border-radius: 0.25rem;
+    background: $clr-gradient;
+    color: $clr-neutral-100;
+    font-size: $fs-fluid-450;
+    font-weight: $fw-bold;
+    text-transform: uppercase;
+    padding: 0 2.25rem;
+    line-height: clamp(2.125rem, 1.9653rem + 0.5941vw, 2.5rem);
+  }
+}
+
+// contact details style
+
+.contact-details-wrapper {
+  width: clamp(25.1875rem, 22.0476rem + 11.6832vw, 32.5625rem);
+  background: $clr-gradient;
+  padding-top: clamp(2.6875rem, 2.3948rem + 1.0891vw, 3.375rem);
+  padding-left: clamp(4.25rem, 3.7444rem + 1.8812vw, 5.4375rem);
+  padding-right: clamp(4.25rem, 3.7444rem + 1.8812vw, 5.4375rem);
+  padding-bottom: clamp(5.4375rem, 5.1182rem + 1.1881vw, 6.1875rem);
+
+  border-radius: 1.25rem 0 0 1.25rem;
+  justify-self: end;
+
+  @include lg {
+    border-radius: 3rem 0 0 3rem;
+  }
+
+  & > * + * {
+    margin-top: 2rem;
+
+    @include lg {
+      margin-top: 2.25rem;
+    }
+  }
+
+  p, a {
+    color: $clr-neutral-100;
+    font-size: $fs-fluid-400;
+    font-weight: $fw-extra-bold;
+  }
+
+  .number a {
+    display: block;
+  }
+
+  & > * {
+    display: flex;
+    gap: 1.5rem;
+
+    &::before {
+      content: "";
+      width: clamp(1.1875rem, 0.8948rem + 1.0891vw, 1.875rem);
+      height: clamp(1.1875rem, 0.8948rem + 1.0891vw, 1.875rem);
+    }
+  }
+
+  .contact-phone-numbers::before {
+    background: url(~/assets/images/contact/phone.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .contact-working-hours::before {
+    background: url(~/assets/images/contact/calendar.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .contact-email::before {
+    background: url(~/assets/images/contact/email.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .contact-address::before {
+    background: url(~/assets/images/contact/location.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}

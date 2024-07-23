@@ -1,34 +1,30 @@
 @use "../abstracts" as *;
 
-/* why us style */
-
 .why-us {
   margin-top: clamp(7.3125rem, 2.6825rem + 17.2277vw, 18.1875rem);
   text-align: center;
-}
-.why-us img {
-  margin: 0 auto;
-}
-.why-us .grid {
-  margin-top: clamp(1.5625rem, 0.0724rem + 5.5446vw, 5.0625rem);
-  padding-left: clamp(1.5625rem, -3.0941rem + 17.3267vw, 12.5rem);
-  padding-right: clamp(1.5625rem, -3.0941rem + 17.3267vw, 12.5rem);
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: clamp(2rem, 1.0851rem + 3.4043vw, 3rem);
-}
-@media (min-width: 60em) {
-  .why-us .grid {
-    gap: clamp(3.125rem, -2.0833rem + 9.2593vw, 6.25rem)
-      clamp(3rem, -13.6667rem + 29.6296vw, 13rem);
+
+
+  .grid {
+    margin-top: clamp(1.5625rem, 0.0724rem + 5.5446vw, 5.0625rem);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+
+    @include lg {
+      gap: 3rem;
+      justify-content: space-around;
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
-}
-.why-us img {
-  width: clamp(2.625rem, 0.8156rem + 6.7327vw, 6.875rem);
-}
-.why-us h4 {
-  margin-top: clamp(0.8125rem, 0.4134rem + 1.4851vw, 1.75rem);
-}
-.why-us p {
-  margin-top: 0.625rem;
+  img {
+    margin: 0 auto;
+    width: clamp(2.625rem, 0.8156rem + 6.7327vw, 6.875rem);
+  }
+  h4 {
+    margin-top: clamp(0.8125rem, 0.4134rem + 1.4851vw, 1.75rem);
+  }
+  p {
+    margin-top: 0.625rem;
+  }
 }

@@ -1,19 +1,15 @@
 @use "../abstracts" as *;
 
-/* general style */
-
 body {
   font-family: $ff-400;
   background-color: $clr-neutral-300;
 }
 
-.header,
-main,
-section,
-footer,
-.reviews-wrapper {
-  max-width: 90rem;
+.container {
+  border: 1px solid green;
+  max-width: $max-width-md;
   margin: 0 auto;
+  padding: 2rem clamp(0.5rem, -0.5644rem + 3.9604vw, 3rem) 3rem clamp(0.5rem, -0.5644rem + 3.9604vw, 2rem);
 }
 
 h2,
@@ -33,6 +29,7 @@ p {
 }
 a {
   text-decoration: none;
+  color: $clr-neutral-100;
 }
 
 /* sections general style */

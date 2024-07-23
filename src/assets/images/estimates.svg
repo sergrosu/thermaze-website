@@ -1,1 +1,10 @@
-<svg width="34" height="34" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#prefix__clip0_168_51)"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.267 3.4a3.4 3.4 0 013.4-3.4h18.602l7.464 7.464V30.6a3.4 3.4 0 01-3.4 3.4H5.667a3.4 3.4 0 01-3.4-3.4V3.4zm6.8 5.667h6.8v2.266h-6.8V9.067zm15.866 6.8H9.067v2.266h15.866v-2.266zm0 6.8h-6.8v2.266h6.8v-2.266z" fill="url(#prefix__paint0_linear_168_51)"/></g><defs><linearGradient id="prefix__paint0_linear_168_51" x1="17" y1="0" x2="17" y2="34" gradientUnits="userSpaceOnUse"><stop stop-color="#83242B"/><stop offset="1" stop-color="#A52D2A"/></linearGradient><clipPath id="prefix__clip0_168_51"><path fill="#fff" d="M0 0h34v34H0z"/></clipPath></defs></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Estimates" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 55 50">
+  <defs>
+    <linearGradient id="b" x1="27.5" y1="52" x2="27.5" y2="2" gradientTransform="translate(0 52) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#84242c"/>
+      <stop offset="1" stop-color="#a52e2a"/>
+    </linearGradient>
+  </defs>
+  <path d="M5.83,5C5.83,2.24,8.07,0,10.83,0h27.36l10.98,10.98v34.02c0,2.76-2.24,5-5,5H10.83c-2.76,0-5-2.24-5-5,0,0,0-40,0-40ZM15.83,13.33h10v3.33h-10v-3.33ZM39.17,23.33H15.83v3.33h23.33v-3.33ZM39.17,33.33h-10v3.33h10s0-3.33,0-3.33Z" style="fill: url(#b); fill-rule: evenodd; stroke-width: 0px;"/>
+</svg>
