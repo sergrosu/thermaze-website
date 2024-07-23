@@ -10,6 +10,7 @@ export default defineConfig({
   //     },
   //   },
   // },
+  base: "/thermaze-website/",
   resolve: {
     alias: {
       "~": path.resolve(__dirname, "./src")
