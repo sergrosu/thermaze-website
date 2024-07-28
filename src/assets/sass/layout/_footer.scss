@@ -7,11 +7,12 @@ footer {
   .container {
     padding-block: 1rem;
 
-    // @include lg {
-    //   display: flex;
-    //   justify-content: space-between;
-    //   align-items: center;
-    // }
+    @include lg {
+      padding-block: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
   .footer-nav {
@@ -24,25 +25,41 @@ footer {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:  "terms  installations"
                           ".      repairs";
+                  
+    @include lg {
+      margin: unset;
+      grid-template-columns: max-content max-content max-content;
+      grid-template-areas: unset;
+      gap: 2rem;
+    }
 
     .terms {
       grid-area: terms;
+
+      @include lg {
+        grid-area: unset;
+        justify-self: unset;
+      }
     }
 
     .installations {
       grid-area: installations;
       justify-self: end;
+
+      @include lg {
+        grid-area: unset;
+        justify-self: unset;
+      }
     }
+
     .repairs {
       grid-area: repairs;
       justify-self: end;
-    }
 
-    @include lg {
-      grid-template-areas: unset;
-      margin: unset;
-      width: 30em;
-      justify-content: space-between;
+      @include lg {
+        grid-area: unset;
+        justify-self: unset;
+      }
     }
   }
 }
