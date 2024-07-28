@@ -1,20 +1,17 @@
 @use "../abstracts" as *;
 
 .why-us {
-  margin-top: clamp(7.3125rem, 2.6825rem + 17.2277vw, 18.1875rem);
   text-align: center;
-
 
   .grid {
     margin-top: clamp(1.5625rem, 0.0724rem + 5.5446vw, 5.0625rem);
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
 
     @include lg {
       gap: 3rem;
       justify-content: space-around;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: 1fr 1fr;
     }
   }
   img {

@@ -1,84 +1,88 @@
 @use "../abstracts" as *;
 
 .contact {
-  margin-top: clamp(9.375rem, 8.7003rem + 2.3469vw, 10.8125rem);
-
   .container {
-    padding: 0;
+    padding-inline: unset;
+  }
+  .wrapper {
+    margin-top: 1.5rem;
+    display: grid;
+    gap: 3rem;
+
+    > * {
+      min-width: 100px;
+    }
+
+    @include lg {
+      grid-template-columns: 2fr 1fr;
+      align-items: start;
+      gap: 0;
+    }
   }
 }
 
 //contact form style
-.contact-form-wrapper {
-  margin-top: 1.5rem;
-  display: grid;
-  gap: 1.5rem;
 
-  @include lg {
-    margin-left: 6.5rem;
-    grid-template-columns: 2fr 1fr;
-    align-items: start;
-    gap: 5.5rem;
-  }
+.contact-form {
+  padding-inline: clamp(1rem, 0.1485rem + 3.1683vw, 3rem);
+  max-width: 100%;
 
-  .contact-form {
-    padding: 0 1.5rem;
-
-    @include lg {
-      padding: 0;
-    }
-  }
   .contact-form-line {
     @include lg {
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 1rem;
     }
   }
-  .contact-form-line > * {
-    @include lg {
-      width: 50%;
-    }
-  }
+
   label {
     margin-top: 1.125rem;
-    margin-bottom: 0.5rem;
     display: block;
     color: $clr-primary-400;
-    font-size: $fs-fluid-450;
     font-weight: $fw-medium;
+    width: 100%;
+    // border: 1px solid teal;
   }
-  input {
+
+  .input,
+  .message {
+    margin-top: 0.5rem;
+    padding: 0.25rem 0.5rem;
     border: unset;
     background: $clr-neutral-500;
     width: 100%;
-    height: 2.3rem;
+    // border: 1px solid blue;
   }
   .message {
-    height: 11.25rem;
+    resize: none;
   }
   .file-upload {
     margin-top: 1.5rem;
-    height: clamp(2rem, 1.8137rem + 0.6931vw, 2.4375rem);
-    background: unset;
     color: $clr-neutral-800;
-    font-family: $ff-400;
     font-weight: $fw-medium;
-    font-size: $fs-fluid-450;
+    max-width: 100%;
   }
-  
+
   .file-upload::file-selector-button {
     background-color: unset;
-    border: 0.5px solid $clr-neutral-800;
-    padding: 0.3rem 2.5rem;
-    margin-right: 1.5rem;
-    height: 100%;
-    width: clamp(10.5625rem, 9.4981rem + 3.9604vw, 13.0625rem);
+    border: 1px solid $clr-neutral-800;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    padding: 0.3rem 2rem;
     cursor: pointer;
+  }
+  .file-upload::file-selector-button:hover {
+    background: $clr-gradient;
+    border: 1px solid $clr-primary-400;
+    color: $clr-neutral-100;
+
   }
 
   .terms {
     margin-top: 1rem;
-    font-size: $fs-fluid-200;
+    font-size: $fs-small;
     line-height: 1.25;
     font-weight: $fw-light;
     display: grid;
@@ -107,82 +111,65 @@
   }
   .form-btn {
     margin-top: 3rem;
-    border: unset;
-    border-radius: 0.25rem;
-    background: $clr-gradient;
-    color: $clr-neutral-100;
     font-size: $fs-fluid-450;
     font-weight: $fw-bold;
     text-transform: uppercase;
-    padding: 0 2.25rem;
-    line-height: clamp(2.125rem, 1.9653rem + 0.5941vw, 2.5rem);
   }
 }
 
 // contact details style
 
-.contact-details-wrapper {
-  width: clamp(25.1875rem, 22.0476rem + 11.6832vw, 32.5625rem);
-  background: $clr-gradient;
-  padding-top: clamp(2.6875rem, 2.3948rem + 1.0891vw, 3.375rem);
-  padding-left: clamp(4.25rem, 3.7444rem + 1.8812vw, 5.4375rem);
-  padding-right: clamp(4.25rem, 3.7444rem + 1.8812vw, 5.4375rem);
-  padding-bottom: clamp(5.4375rem, 5.1182rem + 1.1881vw, 6.1875rem);
-
-  border-radius: 1.25rem 0 0 1.25rem;
+.contact-details {
   justify-self: end;
+  background: $clr-gradient;
+  padding: 4rem;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  justify-items: start;
+  border-radius: 1.25rem 0 0 1.25rem;
+  width: 70%;
 
   @include lg {
     border-radius: 3rem 0 0 3rem;
+    width: 100%;
   }
 
-  & > * + * {
-    margin-top: 2rem;
-
-    @include lg {
-      margin-top: 2.25rem;
-    }
-  }
-
-  p, a {
-    color: $clr-neutral-100;
-    font-size: $fs-fluid-450;
-    font-weight: $fw-extra-bold;
-  }
-
-  .number a {
+  .numbers a {
     display: block;
   }
-
-  & > * {
-    display: flex;
+  .contact-item {
+    color: $clr-neutral-100;
+    font-size: $fs-fluid-400;
+    font-weight: $fw-extra-bold;
+    display: grid;
+    grid-template-columns: clamp(1.1875rem, 0.8948rem + 1.0891vw, 1.875rem) 1fr;
+    align-items: center;
     gap: 1.5rem;
 
     &::before {
       content: "";
-      width: clamp(1.1875rem, 0.8948rem + 1.0891vw, 1.875rem);
       height: clamp(1.1875rem, 0.8948rem + 1.0891vw, 1.875rem);
+      display: block;
     }
   }
-
-  .contact-phone-numbers::before {
+  .phone-numbers::before {
     background: url(~/assets/images/contact/phone.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
   }
-  .contact-working-hours::before {
+
+  .working-hours::before {
     background: url(~/assets/images/contact/calendar.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
   }
-  .contact-email::before {
+
+  .email::before {
     background: url(~/assets/images/contact/email.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
   }
-  .contact-address::before {
+
+  .address::before {
     background: url(~/assets/images/contact/location.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
+  }
+
+  .address {
+    max-width: 20ch;
   }
 }

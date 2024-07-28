@@ -1,17 +1,14 @@
 @use "../abstracts" as *;
 
 .what-we-do {
-  // margin-top: clamp(10.3125rem, 8.8224rem + 5.5446vw, 13.8125rem);
-
   .wrapper {
-    // padding: clamp(0.5rem, -0.5644rem + 3.9604vw, 3rem);
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    margin-inline: auto;
     max-width: 90rem;
 
     @include lg {
-      gap: 5.25rem;
+      gap: 2rem;
       align-items: center;
     }
   }
@@ -28,10 +25,11 @@
 
     img {
       border-radius: 1.25rem 0 1.25rem 1.25rem;
-      box-shadow: -0.5rem 0.5rem #7e222b;
+      box-shadow: -0.5rem 0.5rem $clr-primary-400;
 
       @include lg {
         border-radius: 3rem 0 3rem 3rem;
+        box-shadow: -1.25rem 1.25rem $clr-primary-400;
       }
     }
   }
@@ -53,6 +51,7 @@
       
       @include lg {
         border-radius: 0 3rem 3rem 3rem;
+        box-shadow: 1.25rem 1.25rem $clr-primary-400;
       }
     }
   }

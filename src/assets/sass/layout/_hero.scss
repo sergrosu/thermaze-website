@@ -1,31 +1,22 @@
 @use "../abstracts/" as *;
 @use "../components/cta-button";
 
-$bgUrl: "@/assets/images/hero/hero-desktop-1920x800.jpg";
-
-/* hero style */
 .hero {
 
   .container {
-    max-width: $max-width-lg;
     padding: unset;
     margin: 0 auto;
     position: relative;
-    img {
-      width: 100%;
-      object-fit: cover;
-    }
   }
 
   &--cta {
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -3.5rem;
-    margin: 0 auto;
-    width: clamp(16.25rem, 4.5455rem + 62.4242vw, 42rem);
-    height: clamp(12.375rem, 6.6807rem + 21.1881vw, 25.75rem);
-    background: $clr-gradient-hero;
+    bottom: -3rem;
+    left: 10%;
+    right: 10%;
+    padding-block: 3rem;
+    padding-inline: 2rem;
+    background: $clr-gradient-semi-transparent;
     color: $clr-neutral-100;
     display: flex;
     flex-direction: column;
@@ -37,20 +28,22 @@ $bgUrl: "@/assets/images/hero/hero-desktop-1920x800.jpg";
 
     @include lg {
       left: 0;
+      right: unset;
+      min-height: 60%;
+      max-width: 60%;
       bottom: -4.625rem;
       margin: unset;
       border-radius: 0 3rem 3rem 0;
-      padding-left: 6.5rem;
+      padding-inline: 6.5rem;
       text-align: left;
       align-items: start;
     }
-
-    h1 {
-      font-size: $fs-fluid-600;
-      font-weight: $fw-black;
-      text-transform: capitalize;
-      max-width: 17ch;
-    }
+  }
+  h1 {
+    color: $clr-neutral-100;
+    font-size: $fs-fluid-700;
+    font-weight: $fw-black;
+    text-transform: capitalize;
   }
 }
 

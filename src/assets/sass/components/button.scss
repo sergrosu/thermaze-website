@@ -1,0 +1,18 @@
+@use "../abstracts" as *;
+
+.btn {
+  border: unset;
+  color: $clr-neutral-100;
+  background: $clr-gradient;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.25rem;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &:where(:hover, :focus) {
+    background: $clr-gradient-semi-transparent;
+  }
+}

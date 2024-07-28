@@ -14,13 +14,13 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
+      <div class="container container-lg">
         <img
           src="./src/assets/images/thermaze-wide-logo.svg"
           alt="Thermaze logo"
         />
         <button class="menu" id="menu" aria-label="Main Menu">
-          <svg width="30" height="30" viewBox="0 0 100 100">
+          <svg height="32" viewBox="0 0 100 100">
             <path
               class="line line1"
               d="M 20,29 H 80 C 80,29 95.183626,26.552886 94.048603,66.740373 93.687727,79.51783 89.337539,81.269487 84.867387,81.336152 80.397235,81.402816 75,75 75,75 L 25,25"
@@ -35,53 +35,38 @@
         <nav id="main-nav" class="main-nav hidden" aria-hidden="true">
           <a href="#">Installations</a>
           <a href="#">Repairs</a>
-          <a class="contact-us-anchor" href="#">Contact us</a>
+          <a class="contact-us-anchor btn" href="#">Contact us</a>
         </nav>
       </div>
     </header>
     <main class="hero">
-      <div class="container">
+      <div class="container container-lg">
         <picture>
-          <source
-            media="(max-width: 59.9375em)"
-            srcset="./src/assets/images/hero/hero-mobile.avif"
-            type="image/avif"
-          />
-          <source
-            media="(max-width: 59.9375em)"
-            srcset="./src/assets/images/hero/hero-mobile.webp"
-            type="image/webp"
-          />
-          <source
-            media="(max-width: 59.9375em)"
-            srcset="./src/assets/images/hero/hero-mobile.png"
-            type="image/png"
-          />
-          <source
-            media="(min-width: 60em)"
-            srcset="./src/assets/images/hero/hero-desktop-1920x800.jpg"
-            type="image/avif"
-          />
-          <source
-            media="(min-width: 60em)"
-            srcset="./src/assets/images/hero/hero-desktop.webp"
-            type="image/webp"
-          />
-          <img
-            class="hero-img"
-            src="./src/assets/images/hero/hero-desktop.png"
-            alt="underfloor heating"
-          />
+          <source media="(min-width: 1440px)"
+                  srcset="./src/assets/images-optimised/hero-x-large-1920.webp 1920w">
+          <source media="(min-width: 960px)"
+                  srcset="./src/assets/images-optimised/hero-large-1440.webp 1440w">
+          <source media="(min-width: 480px)"
+                  srcset="./src/assets/images-optimised/hero-medium-960.webp 960w,
+                          ./src/assets/images-optimised/hero-medium-1920.webp 1920w"
+                  sizes="100vw">
+          <!-- <source srcset="./src/assets/images-optimised/hero-small-480.webp 480w,
+                          ./src/assets/images-optimised/hero-small-960.webp 960w,
+                          ./src/assets/images-optimised/hero-small-1440.webp 1440w"
+                  sizes="100vw"> -->
+          <source srcset="./src/assets/images-optimised/hero-small-1000-square.jpg 1000w"
+                  sizes="100vw">
+
+          <img src="./src/assets/images-optimised/hero-480.jpg" alt="">
         </picture>
         <div class="hero--cta">
           <h1>The only underfloor heating specialist you will ever need</h1>
-          <button class="btn cta-btn">Get a quote</button>
+          <button class="cta-btn">Get a quote</button>
         </div>
       </div>
-      
     </main>
     <section class="what-we-do">
-      <div class="container">
+      <div class="container container-md">
           <h2>What we do</h2>
         <div class="service-1">
           <div class="wrapper">
@@ -208,7 +193,7 @@
       </div>
     </section>
     <section class="why-us">
-      <div class="container">
+      <div class="container container-md">
         <h2>Why work with us</h2>
         <div class="grid">
           <div class="company-highlight">
@@ -249,7 +234,7 @@
       </div>
     </section>
     <section class="reviews">
-      <div class="container">
+      <div class="container container-md">
         <h2>What our customers say</h2>
         <div class="carousel">
           <div class="cards">
@@ -592,33 +577,33 @@
       
     </section>
     <section class="contact">
-      <div class="container">
+      <div class="container container-md">
         <h2>Get in touch</h2>
-        <div class="contact-form-wrapper">
+        <div class="wrapper">
           <form class="contact-form" action="">
             <div class="contact-form-line">
               <div>
                 <label for="name">Name</label>
-                <input id="name" type="text" />
+                <input class="input" id="name" type="text" />
               </div>
               <div>
                 <label for="email">Email</label>
-                <input id="email" type="text" />
+                <input class="input" id="email" type="text" />
               </div>
             </div>
             <div class="contact-form-line">
               <div>
                 <label for="phone">Phone</label>
-                <input id="phone" type="number" />
+                <input class="input" id="phone" type="tel" />
               </div>
               <div>
                 <label for="postcode">Postcode</label>
-                <input id="postcode" type="text" />
+                <input class="input" id="postcode" type="text" />
               </div>
             </div>
             <div>
               <label for="message">Message</label>
-              <input id="message" class="message" type="text" />
+              <textarea id="message" class="message" rows = "7"></textarea>
             </div>
             <div>
               <input id="file-upload" class="file-upload" type="file" />
@@ -638,31 +623,29 @@
   
             <button class="btn form-btn">Send</button>
           </form>
-          <div class="contact-details-wrapper">
-            <div class="contact-phone-numbers">
+          <div class="contact-details flow">
+            <div class="contact-item phone-numbers">
               <div class="numbers">
                 <a href="tel:02082816549">020 8281 6549</a>
                 <a href="tel:07445049501">07445 049 501</a>
               </div>
             </div>
-            <p class="contact-working-hours">Available from 9:00 - 17:00</p>
-            <a class="contact-email" href="mailto: info@thermaze.co.uk"
-              >info@thermaze.co.uk</a
-            >
-            <p class="contact-address">
-              4 York House, Langston Road, Loughton, IG10 3TQ
-            </p>
+            <p class="contact-item working-hours">Available from 9:00 - 17:00</p>
+            <a class="contact-item email" href="mailto: info@thermaze.co.uk">
+              info@thermaze.co.uk
+            </a>
+            <p class="contact-item address">4 York House, Langston Road, Loughton, IG10 3TQ</p>
           </div>
         </div>
       </div>
     </section>
     <footer>
-      <div class="container">
+      <div class="container container-md">
         <p>© 2024. Thermaze LTD</p>
         <nav class="footer-nav">
-          <a href="#">Terms & Conditions</a>
-          <a href="#">Installations</a>
-          <a href="#">Repairs</a>
+          <a class="terms" href="#">Terms & Conditions</a>
+          <a class="installations" href="#">Installations</a>
+          <a class="repairs" href="#">Repairs</a>
         </nav>
       </div>
     </footer>

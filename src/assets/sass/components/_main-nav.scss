@@ -30,12 +30,6 @@
   .contact-us-anchor {
     @include lg {
       color: $clr-neutral-100;
-      background: $clr-gradient;
-      padding: 0.5rem 1.5rem;
-      border-radius: 0.25rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
   }
 }

@@ -1,33 +1,45 @@
 @use "../abstracts/" as *;
 
 footer {
-  margin-top: 6.375rem;
   background-color: $clr-primary-400;
   color: $clr-neutral-100;
 
   .container {
-    @include lg {
-      height: 7.25rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-  }
+    padding-block: 1rem;
 
-  p {
-    font-size: $fs-fluid-450;
-    font-weight: $fw-regular;
+    // @include lg {
+    //   display: flex;
+    //   justify-content: space-between;
+    //   align-items: center;
+    // }
   }
 
   .footer-nav {
-    margin-top: 2.5rem;
+    margin-top: 1rem;
     font-size: $fs-fluid-100;
     font-weight: $fw-semi-bold;
     text-transform: uppercase;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    row-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:  "terms  installations"
+                          ".      repairs";
+
+    .terms {
+      grid-area: terms;
+    }
+
+    .installations {
+      grid-area: installations;
+      justify-self: end;
+    }
+    .repairs {
+      grid-area: repairs;
+      justify-self: end;
+    }
 
     @include lg {
+      grid-template-areas: unset;
       margin: unset;
       width: 30em;
       justify-content: space-between;

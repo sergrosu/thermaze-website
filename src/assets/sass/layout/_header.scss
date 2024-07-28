@@ -4,18 +4,17 @@
 
 .header {
   .container {
-    max-width: $max-width-lg;
-    padding-top: unset;
-    padding-bottom: unset;
-    height: clamp(4.75rem, 4.4307rem + 1.1881vw, 5.5rem);
+    margin-top: unset;
+    padding-block: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
     z-index: 1000;
 
-    img {
-      height: clamp(1.6875rem, 1.0223rem + 2.4752vw, 3.25rem);
+    img,
+    .menu svg {
+      height: clamp(2rem, 1.3614rem + 2.3762vw, 3.5rem);
     }
   }
 }

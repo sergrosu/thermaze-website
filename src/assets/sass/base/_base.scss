@@ -6,33 +6,24 @@ body {
 }
 
 .container {
-  border: 1px solid green;
-  max-width: $max-width-md;
-  margin: 0 auto;
-  padding: 2rem clamp(0.5rem, -0.5644rem + 3.9604vw, 3rem) 3rem clamp(0.5rem, -0.5644rem + 3.9604vw, 2rem);
+  margin-inline: auto;
+  margin-top: clamp(5rem, 2.0198rem + 11.0891vw, 12rem);
+  padding-top: 2rem + 3.75rem;
+  padding-bottom: 2rem;
+  padding-inline: clamp(1rem, 0.1485rem + 3.1683vw, 3rem);
+
+  &-lg {
+    max-width: $max-width-lg;
+  }
+  &-md {
+    max-width: $max-width-md;
+  }
 }
 
-h2,
-h3,
-h4 {
-  color: $clr-primary-400;
-}
-
-h3,
-h4 {
-  font-size: $fs-fluid-470;
-  font-weight: $fw-bold;
-}
-p {
-  font-size: $fs-fluid-200;
-  font-weight: $fw-regular;
-}
-a {
-  text-decoration: none;
-  color: $clr-neutral-100;
-}
-
-/* sections general style */
+// .container,
+// .wrapper {
+//   border: 1px solid red;
+// }
 
 h2 {
   text-transform: uppercase;
@@ -49,3 +40,25 @@ h2::before {
   left: 50%;
   transform: translateX(-50%);
 }
+
+h2,
+h3,
+h4 {
+  color: $clr-primary-400;
+}
+
+h3,
+h4 {
+  font-size: $fs-fluid-470;
+  font-weight: $fw-bold;
+}
+p {
+  font-size: $fs-regular;
+  font-weight: $fw-regular;
+}
+a {
+  text-decoration: none;
+  color: $clr-neutral-100;
+
+}
+
